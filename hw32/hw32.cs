@@ -47,14 +47,10 @@ void CheckTheRange(int numb) {
 }
 
 // Проверка дня недели для задачи 15
-void CheckDays(int numb)
-{
-	if (numb > 0 && numb < 6)
-	{
+void CheckDays(int numb) {
+	if (numb > 0 && numb < 6) {
 		Console.WriteLine("Это будний день");
-	}
-	else if (numb > 5 && numb < 8)
-	{
+	} else if (numb > 5 && numb < 8) {
 		Console.WriteLine("Это выходной день!!");
 	}
 }
