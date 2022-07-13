@@ -16,12 +16,8 @@ Console.WriteLine($"Вторая цифра трехзначного числа:
 int number = Int32.Parse(Console.ReadLine());
 Console.WriteLine($"Рандомное число: {number}");
 
-// проверка на однозначность и вывод
-if (number < 10 && number > -1) {
-    Console.WriteLine("Третьей цифры нет");
-}
-// проверка на двузначность и вывод
-if (number < 100 && number > 9) {
+// проверка на однозначные и двузначные числа
+if (number < 100 && number > -1) {
     Console.WriteLine("Третьей цифры нет");
 }
 // проверка на трехзначность и вывод
