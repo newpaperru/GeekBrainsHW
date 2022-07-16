@@ -13,24 +13,22 @@ Console.WriteLine($"Вторая цифра трехзначного числа:
 // // заданного числа или сообщает, что третьей цифры нет.
 // // я понимаю задачу так: числа генерируются рандомные, интервал от 0 до 10000
 
+Console.WriteLine($"Введите число");
 int number = Int32.Parse(Console.ReadLine());
-Console.WriteLine($"Рандомное число: {number}");
+int ThirdDig = 0;
 
-// проверка на однозначные и двузначные числа
-if (number < 100 && number > -1) {
+// проверка на однозначные и двузначные значения чисел
+if (number < 100 && number > -100) {
     Console.WriteLine("Третьей цифры нет");
 }
-// проверка на трехзначность и вывод
-if (number < 1000 && number > 99) {
-    int ThirdFigure = number % 10;
-    Console.WriteLine($"Третья цифра данного числа: {ThirdFigure}");
+
+// цикл для любого значения числа большего чем 999 и меньше, чем -999
+while (number > 999 || number < -999) {
+    number = number / 10;
 }
-// проверка на четырехзначность и вывод
-if (number < 10000 && number > 999) {
-    int NumMod = number % 100;
-    int NumThirdFig = NumMod / 10;
-    Console.WriteLine($"Третья цифра данного числа: {NumThirdFig}");
-}
+// Находит третью цифру от 100 до бесконечности
+ThirdDig = number % 10;
+Console.WriteLine($"Третья цифра данного числа: {ThirdDig}");
 
 
 // <----------Методы 15-15*---------> 
