@@ -1,10 +1,10 @@
-﻿// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+﻿// задача 19
 
 Console.WriteLine("Введите 5-ти значное число");
 int num = Convert.ToInt32(Console.ReadLine());
 
 
-// // // последняя цифра числа
+//последняя цифра числа
 int lastDig = num % 10;
 // предпоследняя цифра числа
 int penDig = num % 100;
@@ -22,3 +22,23 @@ if (num > 99999 || num < 10000){
 } else {
     Console.WriteLine("Данное число не является палиндромом");
 }
+
+// задача 21.
+Console.WriteLine("Введите координаты первой точки: ");
+Console.Write("X: ");
+double x = Convert.ToDouble(Console.ReadLine());
+Console.Write("Y: ");
+double y = Convert.ToDouble(Console.ReadLine());
+Console.Write("Z: ");
+double z = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите координаты второй точки: ");
+Console.Write("X: ");
+double x1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Y: ");
+double y1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Z: ");
+double z1 = Convert.ToDouble(Console.ReadLine());
+double result = 0;
+
+result = Math.Round(Math.Sqrt((Math.Pow(x1 - x, 2) + Math.Pow(y1 - y, 2)) + Math.Pow(z1 - z, 2)), 2);
+Console.WriteLine($"A ({x},{y},{z}); B({x1},{y1},{z1}) -> {result}");
